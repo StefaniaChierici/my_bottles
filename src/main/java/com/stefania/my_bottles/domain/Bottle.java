@@ -16,7 +16,7 @@ public class Bottle {
     private String producer;
 
     public Bottle() {
-        // TODO what happens if this doens't exist?
+        // TODO what happens if this doesn't exist?
     }
 
     public Bottle(long id, String name, String producer) {

@@ -1,6 +1,8 @@
 package com.stefania.my_bottles.web;
 
 import com.google.common.collect.Lists;
+import com.stefania.my_bottles.domain.Bottle;
+import com.stefania.my_bottles.exceptions.UserNotFoundException;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -34,7 +36,6 @@ public class BottlesController {
 
     @POST
     @Path("/{username}")
-    @Accepts
     public Bottle createBottle(@PathParam("username") String username,
                                @NotNull @Valid Bottle bottle) throws UserNotFoundException {
         if (username == null || username.isEmpty()) {
