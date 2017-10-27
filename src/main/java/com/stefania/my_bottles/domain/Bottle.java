@@ -25,9 +25,19 @@ public class Bottle {
         this.producer = producer;
     }
 
+    public Bottle(String name, String producer) {
+        this.name = name;
+        this.producer = producer;
+    }
+
     @JsonProperty
     public long getId() {
         return id;
+    }
+
+    @JsonProperty
+    public void setId(long id) {
+        this.id = id;
     }
 
     @JsonProperty
@@ -39,4 +49,5 @@ public class Bottle {
     public String getProducer() {
         return producer;
     }
+
 }
